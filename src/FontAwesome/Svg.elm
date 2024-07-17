@@ -89,7 +89,7 @@ fill =
     [ SvgA.x "0", SvgA.y "0", SvgA.width "100%", SvgA.height "100%" ]
 
 
-viewMaskedWithTransform : String -> SvgTransformStyles msg -> IconDef -> Icon WithId -> Svg msg
+viewMaskedWithTransform : String -> SvgTransformStyles msg -> IconDef -> Icon hasId -> Svg msg
 viewMaskedWithTransform color transforms exclude ((Icon { id }) as include) =
     let
         alwaysId =

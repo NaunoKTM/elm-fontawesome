@@ -40,7 +40,7 @@ type Icon hasId
         , role : String
         , id : Maybe String
         , title : Maybe String
-        , outer : Maybe (Icon WithId)
+        , outer : Maybe (Icon hasId)
         , attributes : List (Svg.Attribute Never)
         }
 

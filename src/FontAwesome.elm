@@ -163,7 +163,7 @@ is possible if you need to dynamically generate items and don't have existing id
 [the `elm-fontawesome-example` repository](https://github.com/Lattyware/elm-fontawesome-example) for an example of this.
 
 -}
-withId : String -> Icon WithoutId -> Icon WithId
+withId : String -> Icon WithoutId -> Icon WithoutId
 withId id (Icon presentation) =
     Icon { presentation | id = Just id }
 
@@ -187,7 +187,7 @@ Note that this can only be applied where the icon to be masked has an id unique 
 hood in the HTML. Use `withId` to add one.
 
 -}
-masked : Icon WithId -> Icon hasId -> Icon hasId
+masked : Icon hasId -> Icon hasId -> Icon hasId
 masked outer (Icon presentation) =
     Icon { presentation | outer = Just outer }
 
